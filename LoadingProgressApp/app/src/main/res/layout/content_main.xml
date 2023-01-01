@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.esoapps.loadingprogressapp.viewModels.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        tools:context=".activities.MainAct"
+        tools:showIn="@layout/main_act">
+
+        <ImageView
+            android:layout_width="0dp"
+
+            android:layout_height="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/download_img"
+            android:background="@color/c_lightest"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/allRadioGroupMain"
+            />
+
+        <RadioGroup
+            android:id="@+id/allRadioGroupMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/downloadUrlEdt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            >
+
+            <RadioButton
+                android:id="@+id/glideRadioBtn"
+                style="@style/third_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:onClick="@{(view)->viewModel.changeCheckedRadioBtn(view)}"
+                android:text="@{viewModel.glideDownloading.title}" />
+
+            <RadioButton
+                android:id="@+id/loadingRadioBtn"
+                style="@style/third_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:onClick="@{(view)->viewModel.changeCheckedRadioBtn(view)}"
+                android:text="@{viewModel.loadingAppDownloading.title}" />
+
+            <RadioButton
+                android:id="@+id/retrofitRadioBtn"
+                style="@style/third_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:onClick="@{(view)->viewModel.changeCheckedRadioBtn(view)}"
+                android:text="@{viewModel.retrofitDownloading.title}" />
+
+
+            <RadioButton
+                android:id="@+id/customRadioBtn"
+                style="@style/third_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:onClick="@{(view)->viewModel.changeCheckedRadioBtn(view)}"
+                android:text="@{viewModel.customDownloading.title}" />
+
+
+        </RadioGroup>
+
+
+
+
+
+        <EditText
+            android:id="@+id/downloadUrlEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="15dp"
+
+            android:backgroundTint="@color/txt_bg"
+
+            android:fontFamily="@font/bree_serif"
+            android:hint="@string/download_edt_hint"
+
+            android:inputType="textUri"
+            android:maxLines="1"
+            android:padding="10dp"
+
+            android:text="@={viewModel.customDownloadingFromEdt.downloadUrl}"
+            android:textColor="@color/c_black"
+            android:textColorHint="@color/txt_bg"
+
+            android:textSize="18sp"
+
+            app:layout_constraintBottom_toTopOf="@+id/custom_button"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/allRadioGroupMain" />
+
+        <com.esoapps.loadingprogressapp.views.LoadingButton
+            android:id="@+id/custom_button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/downloadUrlEdt"
+
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

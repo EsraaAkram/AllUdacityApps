@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#07C2AA</color>
+    <color name="colorPrimaryDark">#004349</color>
+    <color name="colorAccent">#F9A825</color>
+    <color name="white">#FFFFFF</color>
+
+
+        MINE:
+
+    <color name="colorPrimaryCenter">#3c4778</color>
+    <color name="c_darkest">#1b262c</color>
+    <color name="c_dark">#0f4c75</color>
+    <color name="c_center">#3282b8</color>
+    <color name="c_light">#98BEFF</color>
+
+    <color name="c_lightest">#c9d7e8</color>
+
+
+
+    <color name="bg_lighter">#2196f3</color>
+    <color name="bg_darker">#1e88e5</color>
+    <color name="light_blue_900">#01579B</color>
+    <color name="yellow_lighter">#fbc02d</color>
+    <color name="yellow_darker">#f9a825</color>
+
+    <color name="c_white">#FFFFFF</color>
+    <color name="c_black">#000000</color>
+    <color name="txt_bg">#55010613</color>
+
+</resources>
