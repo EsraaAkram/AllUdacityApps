@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="asteroidClickListener"
+            type="com.esoapps.asteroidradarnasa.views.adapters.AsteroidAdapter.AsteroidClickListener" />
+
+        <variable
+            name="asteroid"
+            type="com.esoapps.asteroidradarnasa.model.Asteroid" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp"
+        android:onClick="@{() -> asteroidClickListener.onClick(asteroid)}"
+        >
+
+
+        <TextView
+            android:id="@+id/titleTvItemRow"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="bottom"
+            android:text="@{asteroid.codeName}"
+
+            app:layout_constraintBottom_toTopOf="@+id/descTvItemRow"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            tools:text="(2101:273)"
+
+
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/descTvItemRow"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="bottom"
+            android:text="@{asteroid.closeApproachDate}"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTvItemRow"
+
+            tools:text="2022-10-26"
+
+            android:textSize="16sp"
+            android:textStyle="normal"/>
+
+
+        <ImageView
+            android:id="@+id/statusImgItemRow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:statusIcon="@{asteroid.potentiallyHazardous}"
+            tools:src="@drawable/ic_status_potentially_hazardous"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
