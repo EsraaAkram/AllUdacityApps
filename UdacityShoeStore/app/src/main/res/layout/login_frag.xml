@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<!--    CENTER LOGIN LAYOUT USING CONSTRAINT LAYOUT-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_gravity="center"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/mailEdt"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:backgroundTint="@color/yellow_darker"
+
+            android:fontFamily="@font/el_messiri"
+
+            android:hint="@string/login_mail_hint"
+            android:inputType="textEmailAddress"
+
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="@color/c_white"
+
+            android:textColorHint="@color/c_white"
+            android:textSize="20sp"
+
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toTopOf="@+id/passEdt"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/signInBtn"
+            app:layout_constraintHorizontal_bias="0.5"
+
+            app:layout_constraintStart_toEndOf="@+id/passEdt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <EditText
+            android:id="@+id/passEdt"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/yellow_darker"
+
+            android:fontFamily="@font/el_messiri"
+
+            android:hint="@string/password_mail_hint"
+            android:inputType="textPassword"
+
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="@color/c_white"
+
+            android:textColorHint="@color/c_white"
+            android:textSize="20sp"
+
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toTopOf="@+id/signInBtn"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mailEdt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mailEdt"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/signInBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_background_design"
+
+            android:fontFamily="@font/aclonica"
+            android:text="@string/sign_in_btn_txt"
+            android:textColor="@color/light_blue_900"
+
+
+            android:textSize="18sp"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/orTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/signUpBtn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mailEdt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passEdt"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+        <TextView
+            android:id="@+id/orTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/or_tv_login_act"
+            android:textAlignment="center"
+            android:textColor="@color/c_white"
+            android:textSize="20sp"
+
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toTopOf="@+id/signUpBtn"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/signUpBtn"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signInBtn"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+        <Button
+            android:id="@+id/signUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_background_design"
+
+            android:fontFamily="@font/aclonica"
+            android:text="@string/sign_up_btn_txt"
+            android:textColor="@color/light_blue_900"
+
+
+            android:textSize="18sp"
+
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/orTv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/signInBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orTv"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+
+
+

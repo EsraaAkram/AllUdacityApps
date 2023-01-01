@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    ADDING SCROLL VIEW AND LINEAR LAYOUT INSIDE-->
+<!--    TO FIT ALL SCREENS -->
+
+<!--   USE TWO WAY BINDING TO CATCH DATA WITH THE VIEW MODEL -->
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.esoapps.udacityshoestore.viewmodels.MainViewModel"/>
+
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".views.store.AddShoeFrag">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center"
+
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+
+            >
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/el_messiri"
+
+                android:text="@string/name_label"
+
+                android:textColor="@color/yellow_darker"
+                android:textSize="18sp"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@+id/nameEdt"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <EditText
+                android:id="@+id/nameEdt"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/yellow_darker"
+
+                android:fontFamily="@font/el_messiri"
+
+                android:hint="@string/name_hint"
+                android:inputType="text"
+
+                android:maxLines="1"
+                android:textColor="@color/c_white"
+
+                android:textColorHint="@color/c_white"
+                android:textSize="20sp"
+
+                android:textStyle="bold"
+
+                android:text="@={viewModel.name}"
+
+                app:layout_constraintBottom_toTopOf="@+id/descTv"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTv"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <TextView
+                android:id="@+id/descTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+
+                android:fontFamily="@font/el_messiri"
+
+                android:text="@string/desc_label"
+                android:textColor="@color/yellow_darker"
+
+                android:textSize="18sp"
+
+                android:textStyle="bold"
+
+
+                app:layout_constraintBottom_toTopOf="@+id/descEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/nameEdt"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <EditText
+                android:id="@+id/descEdt"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/yellow_darker"
+
+                android:fontFamily="@font/el_messiri"
+
+                android:hint="@string/desc_hint"
+                android:inputType="text"
+
+                android:maxLines="1"
+                android:textColor="@color/c_white"
+
+                android:textColorHint="@color/c_white"
+                android:textSize="20sp"
+
+                android:textStyle="bold"
+
+                android:text="@={viewModel.description}"
+
+
+                app:layout_constraintBottom_toTopOf="@+id/companyTv"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descTv"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <TextView
+                android:id="@+id/companyTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+
+                android:fontFamily="@font/el_messiri"
+
+                android:text="@string/company_label"
+                android:textColor="@color/yellow_darker"
+
+                android:textSize="18sp"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@+id/companyEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/descEdt"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <EditText
+                android:id="@+id/companyEdt"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/yellow_darker"
+
+                android:fontFamily="@font/el_messiri"
+
+                android:hint="@string/company_hint"
+                android:inputType="text"
+
+                android:maxLines="1"
+                android:textColor="@color/c_white"
+
+                android:textColorHint="@color/c_white"
+                android:textSize="20sp"
+
+                android:textStyle="bold"
+
+                android:text="@={viewModel.company}"
+
+
+                app:layout_constraintBottom_toTopOf="@+id/sizeTv"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/companyTv"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <TextView
+                android:id="@+id/sizeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+
+                android:fontFamily="@font/el_messiri"
+
+                android:text="@string/size_label"
+                android:textColor="@color/yellow_darker"
+
+                android:textSize="18sp"
+
+                android:textStyle="bold"
+
+
+                app:layout_constraintBottom_toTopOf="@+id/sizeEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/companyEdt"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <EditText
+                android:id="@+id/sizeEdt"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/yellow_darker"
+
+                android:fontFamily="@font/el_messiri"
+
+                android:hint="@string/size_hint"
+                android:inputType="numberDecimal"
+
+                android:maxLines="1"
+                android:textColor="@color/c_white"
+
+                android:textColorHint="@color/c_white"
+                android:textSize="20sp"
+
+                android:textStyle="bold"
+
+
+                android:text="@={viewModel.size}"
+
+                app:layout_constraintBottom_toTopOf="@+id/cancelBtn"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sizeTv"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="7dp"
+
+                android:background="@drawable/btn_background_design"
+                android:fontFamily="@font/aclonica"
+                android:text="@string/cancel"
+
+
+                android:textAllCaps="false"
+                android:textColor="@color/light_blue_900"
+
+                android:textSize="18sp"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/saveBtn"
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/sizeEdt"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed"
+
+
+                android:onClick="@{() -> viewModel.cancelAddingData()}"/>
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="7dp"
+
+                android:background="@drawable/btn_background_design"
+                android:fontFamily="@font/aclonica"
+                android:text="@string/save"
+
+
+                android:textAllCaps="false"
+                android:textColor="@color/light_blue_900"
+
+                android:textSize="18sp"
+
+
+                android:textStyle="bold"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/cancelBtn"
+
+                app:layout_constraintTop_toBottomOf="@+id/sizeEdt"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed"
+
+
+                android:onClick="@{() -> viewModel.saveData()}"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
+

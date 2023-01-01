@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+<!--    THIS ITEM ROW WORKS AS A ROW VIEW TO HOLD EVERY ITEM DATA-->
+<!--    USNING DATA BINDING TO ADD DATA TO THIS VIEW-->
+<!--    THEN ADD THIS VIEW TO THE LIST-->
+
+    <data>
+        <variable
+            name="shoesData"
+            type="com.esoapps.udacityshoestore.models.Shoe"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:padding="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="5dp"
+
+        android:background="@drawable/rounded_back_ground_design">
+
+
+        <TextView
+            android:id="@+id/nameTvRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center_horizontal"
+
+            android:text="@{`Name: ` + shoesData.name}"
+
+            android:textAlignment="center"
+            android:textColor="@color/c_white"
+            android:textSize="20sp"
+
+            android:textStyle="bold"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+
+            app:layout_constraintStart_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+        <ImageView
+            android:id="@+id/imgRow"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="5dp"
+            android:layout_marginStart="3dp"
+
+
+            android:src="@drawable/shoes_board_img"
+            android:background="@drawable/img_background_design"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+
+
+            app:layout_constraintStart_toEndOf="@id/descTvRow"
+
+            app:layout_constraintTop_toBottomOf="@id/nameTvRow"
+            app:layout_constraintVertical_chainStyle="packed"
+
+            />
+
+
+        <TextView
+            android:id="@+id/descTvRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/el_messiri"
+
+            android:text="@{`Description: ` + shoesData.description}"
+
+
+
+            android:textColor="@color/c_white"
+            android:textSize="17sp"
+
+            android:textStyle="bold"
+
+
+            app:layout_constraintHorizontal_bias="0.5"
+
+            app:layout_constraintStart_toEndOf="parent"
+
+            app:layout_constraintEnd_toStartOf="@id/imgRow"
+            app:layout_constraintStart_toStartOf="parent"
+
+
+            app:layout_constraintTop_toBottomOf="@id/nameTvRow"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+
+        <TextView
+            android:id="@+id/companyTvRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/el_messiri"
+            android:gravity="center_horizontal"
+
+            android:text="@{`Company: ` + shoesData.company}"
+
+            android:textAlignment="center"
+            android:textColor="@color/c_white"
+            android:textSize="16sp"
+
+            android:textStyle="bold"
+
+
+            app:layout_constraintHorizontal_bias="0.5"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+
+
+            app:layout_constraintTop_toBottomOf="@id/imgRow"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+        <TextView
+            android:id="@+id/sizeTvRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/el_messiri"
+            android:gravity="center_horizontal"
+
+            android:text="@{`Size: ` + shoesData.size}"
+
+
+            android:textAlignment="center"
+            android:textColor="@color/c_white"
+            android:textSize="16sp"
+
+            android:textStyle="bold"
+
+
+            app:layout_constraintHorizontal_bias="0.5"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintTop_toBottomOf="@id/imgRow"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
