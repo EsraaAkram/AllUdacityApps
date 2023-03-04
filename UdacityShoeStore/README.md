@@ -4,11 +4,11 @@ As a part of Udacity Advanced Android training this is a simple app to show how 
 2-How to use Jetpack Navigation to navigate between Fragments
 
 
-<img src="/Images/1.jpg" alt="Alt text">
-<img src="/Images/2.jpg" alt="Alt text">
-<img src="/Images/3.jpg" alt="Alt text">
-<img src="/Images/4.jpg" alt="Alt text">
-<img src="/Images/5.jpg" alt="Alt text">
-<img src="/Images/6.jpg" alt="Alt text">
-<img src="/Images/7.jpg" alt="Alt text">
+<img src="/UdacityShoeStore/Images/1.jpg" alt="Alt text">
+<img src="/UdacityShoeStore/Images/2.jpg" alt="Alt text">
+<img src="/UdacityShoeStore/Images/3.jpg" alt="Alt text">
+<img src="/UdacityShoeStore/Images/4.jpg" alt="Alt text">
+<img src="/UdacityShoeStore/Images/5.jpg" alt="Alt text">
+<img src="/UdacityShoeStore/Images/6.jpg" alt="Alt text">
+<img src="/UdacityShoeStore/Images/7.jpg" alt="Alt text">
 
